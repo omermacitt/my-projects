@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 import sys
 mesaj = MIMEMultipart()
 
-mesaj["From"] = ""
+mesaj["From"] = "" # mail kimden gidecek
 def mail(n,s,i,b,p,skin,g,a,blo,d,phon,m,sonuc):
     sonuc_=""
     if(sonuc==1):
@@ -37,7 +37,7 @@ def mail(n,s,i,b,p,skin,g,a,blo,d,phon,m,sonuc):
         mail = smtplib.SMTP("smtp.gmail.com",587)
         mail.ehlo()
         mail.starttls()
-        mail.login("","")
+        mail.login("","") # mail ve password
         mail.sendmail(mesaj["From"],mesaj["To"],mesaj.as_string())
         print("Mail Başarıyla Gönderildi....")
         mail.close()
