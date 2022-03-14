@@ -65,5 +65,4 @@ def tahmin(preg,gluc,blood,skin,ins,bmi_,dmf,age):
 
     return yuklenen.predict(df)
 
-df=tahmin(500,500,500,500,500,500,500,500)
 
